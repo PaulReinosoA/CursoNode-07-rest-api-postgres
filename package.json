@@ -97,8 +97,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsnd --respawn --clear src/app.ts",
-    "build": "rimraf ./dist && tsc && npm run prismamigration",
-    "start": "npm run build && node dist/app.js",
+    "build": "rimraf ./dist && tsc && npm run prisma:migrate:prod",
+    "start": "npm run build && node dist/app.ts",
     "prisma:migrate:prod":"prisma migrate deploy"
   },
   "keywords": [],
